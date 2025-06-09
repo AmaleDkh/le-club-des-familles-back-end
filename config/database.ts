@@ -12,7 +12,7 @@ export default ({ env }) => {
               rejectUnauthorized: env.bool(
                 "DATABASE_SSL_REJECT_UNAUTHORIZED",
                 false
-              ), // false selon Render
+              ),
             },
           }
         : {

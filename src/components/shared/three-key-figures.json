@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_three_key_figures",
+  "info": {
+    "displayName": "ThreeKeyFigures"
+  },
+  "options": {},
+  "attributes": {
+    "FirstKeyFigureNumber": {
+      "type": "string"
+    },
+    "FirstKeyFigureParagraph": {
+      "type": "text"
+    },
+    "SecondKeyFigureNumber": {
+      "type": "string"
+    },
+    "SecondKeyFigureParagraph": {
+      "type": "text"
+    },
+    "ThirdKeyFigureNumber": {
+      "type": "string"
+    },
+    "ThirdKeyFigureParagraph": {
+      "type": "text"
+    },
+    "SectionTitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

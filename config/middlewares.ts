@@ -10,7 +10,7 @@ export default [
         "https://le-club-des-familles.vercel.app",
       ],
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"],
-      headers: ["*"],
+      headers: ["Content-Type", "Authorization", "Origin", "Accept"],
     },
   },
   "strapi::poweredBy",

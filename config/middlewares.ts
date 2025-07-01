@@ -5,9 +5,7 @@ export default [
   {
     name: "strapi::cors",
     config: {
-      origin: [
-        "https://le-club-des-familles-git-main-amaledkhs-projects.vercel.app",
-      ],
+      origin: ["https://le-club-des-familles.vercel.app"],
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"],
       headers: "*",
     },

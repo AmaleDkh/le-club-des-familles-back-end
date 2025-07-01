@@ -5,9 +5,12 @@ export default [
   {
     name: "strapi::cors",
     config: {
-      origin: ["https://le-club-des-familles.vercel.app"],
+      origin: [
+        "http://localhost:3000",
+        "https://le-club-des-familles.vercel.app",
+      ],
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"],
-      headers: "*",
+      headers: ["*"],
     },
   },
   "strapi::poweredBy",

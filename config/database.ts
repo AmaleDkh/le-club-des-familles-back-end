@@ -7,17 +7,31 @@ export default ({ env }) => {
     postgres: {
       connection: {
         connectionString: env("DATABASE_URL"),
-        ssl: env.bool("DATABASE_SSL", false) && {
-          rejectUnauthorized: env.bool(
-            "DATABASE_SSL_REJECT_UNAUTHORIZED",
-            true
-          ),
-          key: env("DATABASE_SSL_KEY", undefined),
-          cert: env("DATABASE_SSL_CERT", undefined),
-          ca: env("DATABASE_SSL_CA", undefined),
-          capath: env("DATABASE_SSL_CAPATH", undefined),
-          cipher: env("DATABASE_SSL_CIPHER", undefined),
-        },
+        ssl: env.bool("DATABASE_SSL", false)
+          ? {
+              rejectUnauthorized: env.bool(
+                "DATABASE_SSL_REJECT_UNAUTHORIZED",
+                true
+              ),
+              key: env("DATABASE_SSL_KEY", undefined),
+              cert: env("DATABASE_SSL_CERT", undefined),
+              ca: env("DATABASE_SSL_CA", undefined),
+              capath: env("DATABASE_SSL_CAPATH", undefined),
+              cipher: env("DATABASE_SSL_CIPHER", undefined),
+            }
+          : false,
+
+        // ssl: env.bool("DATABASE_SSL", false) && {
+        //   rejectUnauthorized: env.bool(
+        //     "DATABASE_SSL_REJECT_UNAUTHORIZED",
+        //     true
+        //   ),
+        //   key: env("DATABASE_SSL_KEY", undefined),
+        //   cert: env("DATABASE_SSL_CERT", undefined),
+        //   ca: env("DATABASE_SSL_CA", undefined),
+        //   capath: env("DATABASE_SSL_CAPATH", undefined),
+        //   cipher: env("DATABASE_SSL_CIPHER", undefined),
+        // },
         schema: env("DATABASE_SCHEMA", "public"),
       },
       pool: {
